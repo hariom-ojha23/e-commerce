@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 import Rating from '../components/Rating'
-import products from '../resource/products'
+import axios from 'axios'
 
 const ProductScreen = ({ match }) => {
-  const product = products.find((p) => p._id === match.params.id)
+  const [product, setProduct] = useState({})
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const { data } = await axios.get(`/api/products/${match.params.id}`)
+
+        setProduct(data)
+      } catch (error) {
+        console.log('Error : ', error)
+      }
+    }
+
+    fetchProduct()
+  }, [match.params.id])
 
   return (
     <>
@@ -56,7 +70,7 @@ const ProductScreen = ({ match }) => {
                 <Button
                   style={{ backgroundColor: '#FF7518' }}
                   type='button'
-                  class='btn'
+                  className='btn'
                   disabled={product.countInStock === 0}
                 >
                   Add to cart
