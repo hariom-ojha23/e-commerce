@@ -14,3 +14,13 @@ h4 {
 .rating span {
   margin: 0.1rem;
 }
+
+.btn {
+  text-transform: uppercase;
+  border: none;
+  font-weight: 600;
+}
+
+.btn:focus {
+  box-shadow: none;
+}

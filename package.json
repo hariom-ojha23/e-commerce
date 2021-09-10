@@ -1,0 +1,19 @@
+{
+  "name": "myshop",
+  "version": "1.0.0",
+  "description": "MERN e-commerce shopping app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hari om ojha",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
+  }
+}
