@@ -7,13 +7,17 @@
   "scripts": {
     "server": "nodemon backend/server",
     "client": "yarn --cwd frontend start",
-    "dev": "concurrently \"yarn server\" \"yarn client\" "
+    "dev": "concurrently \"yarn server\" \"yarn client\" ",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
   },
   "author": "hari om ojha",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
     "mongoose": "^6.0.5"
   },
   "devDependencies": {
