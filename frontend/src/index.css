@@ -1,14 +1,43 @@
+body {
+  font-family: sans-serif, monospace;
+}
+
 main {
   min-height: 80vh;
 }
 
+a div,
 a {
-  text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
-h4 {
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+h1 {
   padding: 1rem 0;
+  font-size: 1.8rem;
+}
+
+h2 {
+  padding: 0.5rem 0;
+  font-size: 1.4rem;
 }
 
 .rating span {
@@ -23,4 +52,8 @@ h4 {
 
 .btn:focus {
   box-shadow: none;
+}
+
+.btn-rounded {
+  border-radius: 50%;
 }
