@@ -44,12 +44,22 @@ h2 {
   margin: 0.1rem;
 }
 
+.nav-link {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.dropdown-item {
+  letter-spacing: 1px;
+}
+
 .btn {
   text-transform: uppercase;
   letter-spacing: 1px;
   border: none;
   font-weight: 500;
-  padding: 0.7rem 2.2rem;
 }
 
 .btn:focus {
